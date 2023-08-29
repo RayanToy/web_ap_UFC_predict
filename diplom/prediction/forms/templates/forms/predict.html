@@ -1,0 +1,52 @@
+ {% extends 'main/layout.html' %}
+
+ {% block title %} Прогнозирование результата боя {% endblock %}
+
+ {% block content %}
+<div class="features">
+  <h1> Прогнозирование результата боя UFC {{ data2 }} </h1>
+<p>
+    На этой странице можно спрогнозировать результат боя UFC введя признаки предстоящего боя. Необходимо отметить что для каждого бойца вводится разница между значениями. То есть если мы вводим признак возраст, то мы введем разницу между этими двумя предикторами.
+    Выводятся прогнозы, для каждого метода машинного обучения. Стоит отметить, что прогноз модели не является абсолютно точным и финальное решение про поставке ставки остаётся за вами.
+
+</p>
+    <h6> Прогноз Лог регрессии: {{ LogR_prediction }} </h6>
+    <h6> Прогноз Дереве решений: {{ clf_prediction }} </h6>
+    <h6> Прогноз Случайного леса: {{ forest_prediction }} </h6>
+    <h6> Прогноз Методом k-случайных соседей: {{ neigh_prediction }} </h6>
+    <h6> Прогноз ЛДА: {{ LDA_prediction }} </h6>
+        <form method="post">
+            {% csrf_token %}
+
+
+        <div id="left">
+            {{ form.win_streak_dif }} <br/>
+            {{ form.longest_win_streak_dif }} <br/>
+            {{ form.loss_dif }} <br>
+            {{ form.age_dif }} <br/>
+            {{ form.avg_td_dif }} <br/>
+            {{ form.draw_diff }} <br/>
+            {{ form.win_by_Decision_Split_diff }} <br/>
+            {{ form.win_by_Decision_Unanimous_diff }} <br/>
+            {{ form.win_by_TKO_Doctor_Stoppage_diff }} <br/>
+            {{ form.odds_diff }} <br/>
+            <button class="btn btn-success" type="submit"> Спрогнозировать результат </button>
+            </div>
+                <div id="right">
+                    {{ form.ev_diff}} <br/>
+            {{ form.kd_bout_diff }} <br/>
+            {{ form.tot_str_landed_bout_diff }} <br/>
+            {{ form.tot_str_attempted_bout_diff }} <br/>
+            {{ form.td_landed_bout_diff }} <br/>
+            {{ form.td_attempted_bout_diff }} <br/>
+            {{ form.td_pct_bout_diff }} <br/>
+            {{ form.sub_attempts_bout_diff }} <br/>
+            {{ form.pass_bout_diff }} <br/>
+            {{ form.rev_bout_diff }} <br/>
+                </div>
+        </form>
+
+</div>
+ {% endblock content %}
+
+

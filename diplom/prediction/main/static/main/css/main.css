@@ -1,0 +1,130 @@
+body  {
+    background: #2c2c2c;
+}
+
+aside {
+float:left;
+width:25%;
+background: #181818;
+padding:2.5%;
+height: 110vh;
+color: #FF0000;
+border-right: 5px solid #4d4d4d
+}
+
+aside imf
+{
+    width: 40 px;
+    float:
+}
+
+
+aside .logo {
+font-size:37px;
+font-weight: bold;
+top: -3px;
+}
+
+aside ul {list-style:none}
+
+aside ul li
+{
+color: #a9a9a9;
+display: block;
+margin-top: 20px;
+transition: all 0.6 ease;
+text-decoration: underline #a9a9a9;
+transition: all .2s ease;
+}
+
+aside ul li:hover, aside ul a:hover {
+    color: #eb5959;
+    text-decoration: none;
+    padding:2.5%;
+    transform: scale(1.05);
+}
+
+main .features
+{
+    color: white;
+    margin-right: 20px;
+    width: = 75%;
+    overflow: hidden;
+}
+
+main .ob
+{
+    color: white;
+    margin-left: 20px;
+}
+
+main .test
+{
+    color: white;
+    margin-left: 20px;
+}
+
+main .chuv
+{
+    color: white;
+    margin-left: 20px;
+}
+main p
+{
+    margin-left: 20px;
+}
+
+main .h1
+{
+    margin-left: 20px;
+}
+
+main .polnota
+{
+    color: white;
+    margin-left: 20px;
+}
+
+
+
+main .fmera
+{
+    color: white;
+    margin-left: 20px;
+}
+
+
+form
+{
+
+    margin-top: 20px;
+}
+
+#right
+{
+    width: 500px;
+    float: left;
+    margin-left: 60px;
+}
+
+#left
+{
+    width: 500px;
+    margin-left: 20px;
+    float: left;
+}
+
+
+#right_tree
+{
+    margin-top: 25px;
+    float: left;
+}
+
+
+#left_tree
+{
+margin-left: 5px;
+ float: left;
+ width: 200px;
+}
